@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>PromoAdda — Premium Social Media Growth</title>
+
+<!-- ============================================================ -->
+<!-- META PIXEL SETUP — paste your Pixel ID in the ONE spot below -->
+<!-- ============================================================ -->
+<script>
+  window.PIXEL_ID = "YOUR_PIXEL_ID_HERE"; // <-- PASTE YOUR META PIXEL ID HERE ONLY
+</script>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', window.PIXEL_ID);
+fbq('track', 'PageView');
+</script>
+<!-- ============================================================ -->
+
+<style>
+  :root{
+    --teal-deep:#0F4C4C;
+    --teal-mid:#15665F;
+    --cream:#FAF7F0;
+    --cream-soft:#F1ECE0;
+    --gold:#E8A33D;
+    --gold-light:#F4C268;
+    --charcoal:#1A1F1C;
+    --grey-text:#5B6660;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    font-family:'Poppins','Noto Sans Devanagari',sans-serif;
+    background:var(--cream);
+    color:var(--charcoal);
+    overflow-x:hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  .wrap{ max-width:1080px; margin:0 auto; }
+
+  /* ================= HERO ================= */
+  .hero{
+    position:relative;
+    background:linear-gradient(165deg,var(--teal-deep) 0%,var(--teal-mid) 60%,#1B7A6E 100%);
+    color:var(--cream);
+    padding:32px 18px 36px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-60px;right:-60px;
+    width:220px;height:220px;
+    background:radial-gradient(circle,rgba(232,163,61,0.22),transparent 70%);
+    border-radius:50%;
+    pointer-events:none;
+  }
+
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+    margin:0 auto;
+  }
+
+  .app-name{
+    font-size:clamp(26px,5vw,40px);
+    font-weight:800;
+    letter-spacing:-0.5px;
+    line-height:1.1;
+  }
+  .app-name span{color:var(--gold-light);}
+
+  .tagline{
+    font-size:clamp(12.5px,1.8vw,16px);
+    font-weight:500;
+    color:#DCEFEA;
+    max-width:420px;
+    margin:8px auto 0;
+    line-height:1.45;
+  }
+
+  .download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);
+    color:var(--teal-deep);
+    font-weight:700;
+    font-size:clamp(19px,5vw,23px);
+    padding:19px 50px;
+    border-radius:14px;
+    border:none;
+    text-decoration:none;
+    box-shadow:0 10px 28px rgba(232,163,61,0.45), 0 0 0 4px rgba(255,255,255,0.12);
+    cursor:pointer;
+    margin-top:18px;
+    animation:pulse 2.2s ease-in-out infinite;
+    transition:transform .15s ease;
+  }
+  .download-btn:active{ transform:scale(0.96); }
+  .download-btn svg{ width:25px; height:25px; flex-shrink:0; }
+  @media (max-width:480px){
+    .download-btn{
+      padding:20px 22px;
+      width:100%;
+      max-width:340px;
+      justify-content:center;
+      font-size:21px;
+    }
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 10px 28px rgba(232,163,61,0.45), 0 0 0 4px rgba(255,255,255,0.12);}
+    50%{box-shadow:0 10px 34px rgba(232,163,61,0.65), 0 0 0 8px rgba(255,255,255,0.05);}
+  }
+
+  /* live counter */
+  .counter-strip{
+    margin:16px auto 0;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+  }
+  .live-dot{
+    width:8px;height:8px;
+    background:#FF6B5E;
+    border-radius:50%;
+    flex-shrink:0;
+    animation:blink 1.4s ease-in-out infinite;
+  }
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+  .counter-text{ font-size:12.5px; color:#DCEFEA; font-weight:500; }
+  .counter-num{ font-weight:800; color:var(--gold-light); font-size:14px; }
+
+  /* ================= VIDEO SECTION ================= */
+  .video-section{
+    padding:34px 18px 14px;
+    text-align:center;
+  }
+  .video-line{
+    color:var(--teal-deep);
+    font-size:clamp(13px,1.8vw,15px);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .video-frame-wrap{
+    position:relative;
+    max-width:480px;
+    margin:0 auto;
+  }
+  .video-frame-glow{
+    position:absolute;
+    inset:-8px;
+    background:radial-gradient(circle, rgba(232,163,61,0.4), transparent 70%);
+    border-radius:20px;
+    z-index:0;
+    animation:glowPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes glowPulse{0%,100%{opacity:0.5;}50%{opacity:1;}}
+
+  .video-frame{
+    position:relative;
+    z-index:1;
+    background:var(--teal-deep);
+    border-radius:16px;
+    padding:5px;
+    box-shadow:0 14px 32px rgba(15,76,76,0.25);
+    aspect-ratio:16/9;
+    overflow:hidden;
+    cursor:pointer;
+  }
+  .video-frame iframe{
+    width:100%; height:100%;
+    border-radius:12px; border:none; display:block;
+  }
+  .play-overlay{
+    position:absolute; inset:5px;
+    border-radius:12px;
+    background:transparent;
+    display:flex; align-items:center; justify-content:center;
+    z-index:2;
+    transition:opacity .25s ease;
+    pointer-events:none;
+  }
+  .play-overlay.hidden{ opacity:0; pointer-events:none; }
+  .play-circle{
+    width:auto;
+    height:auto;
+    background:rgba(15,76,76,0.85);
+    border-radius:50px;
+    display:flex; align-items:center; justify-content:center;
+    gap:8px;
+    padding:12px 22px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    animation:playPulse 1.6s ease-in-out infinite;
+    cursor:pointer;
+    pointer-events:auto;
+    border:2px solid var(--gold-light);
+    color:var(--cream);
+    font-weight:700;
+    font-size:14px;
+  }
+  @keyframes playPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.06);}}
+  .play-circle svg{ width:20px; height:20px; flex-shrink:0; }
+
+  .video-line-bottom{
+    color:var(--grey-text);
+    font-size:12px;
+    font-weight:500;
+    margin-top:10px;
+  }
+
+  /* ---- floating unmute button (outside video, right side) ---- */
+  .float-unmute-btn{
+    position:absolute;
+    top:50%;
+    right:-14px;
+    transform:translateY(-50%);
+    z-index:5;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    background:var(--teal-deep);
+    color:var(--cream);
+    border:2px solid var(--gold-light);
+    border-radius:50px;
+    padding:10px 16px;
+    font-size:12.5px;
+    font-weight:700;
+    box-shadow:0 6px 18px rgba(15,76,76,0.4);
+    cursor:pointer;
+    animation:floatBob 1.8s ease-in-out infinite;
+    transition:opacity .25s ease;
+    white-space:nowrap;
+  }
+  .float-unmute-btn.hidden{ opacity:0; pointer-events:none; }
+  .float-unmute-btn svg{ width:16px; height:16px; flex-shrink:0; }
+  @keyframes floatBob{
+    0%,100%{ transform:translateY(-50%); }
+    50%{ transform:translateY(calc(-50% - 6px)); }
+  }
+  @media (max-width:560px){
+    .float-unmute-btn{
+      right:6px;
+      top:auto;
+      bottom:-18px;
+      transform:translateY(0);
+      padding:9px 14px;
+      font-size:11.5px;
+    }
+    @keyframes floatBob{
+      0%,100%{ transform:translateY(0); }
+      50%{ transform:translateY(-6px); }
+    }
+  }
+
+  /* ---- mid-page floating download CTA (between video and badges) ---- */
+  .mid-download-section{
+    text-align:center;
+    padding:30px 18px 4px;
+  }
+  .mid-download-section .download-btn{
+    margin-top:0;
+    animation:pulse 2.2s ease-in-out infinite, floatUpDown 2.6s ease-in-out infinite;
+  }
+  @keyframes floatUpDown{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+  }
+
+  /* ================= TRUST BADGES ================= */
+  .badges{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    padding:24px 18px 8px;
+    max-width:760px;
+    margin:0 auto;
+  }
+  .badge{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    background:var(--cream-soft);
+    border-radius:10px;
+    padding:9px 16px;
+    font-size:12px;
+    font-weight:600;
+    color:var(--teal-deep);
+  }
+  .badge svg{ width:15px; height:15px; flex-shrink:0; color:var(--gold); }
+
+  /* ================= STEPS ================= */
+  .steps-section{
+    padding:36px 18px 30px;
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .steps-heading{
+    font-size:clamp(18px,2.6vw,23px);
+    font-weight:800;
+    color:var(--teal-deep);
+    margin-bottom:4px;
+  }
+  .steps-sub{
+    font-size:12.5px;
+    color:var(--grey-text);
+    margin-bottom:24px;
+  }
+  .steps-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+  }
+  @media (max-width:640px){
+    .steps-grid{ grid-template-columns:1fr; gap:14px; }
+  }
+  .step-card{
+    background:var(--cream-soft);
+    border-radius:14px;
+    padding:20px 16px;
+    text-align:left;
+    position:relative;
+  }
+  .step-num{
+    width:30px;height:30px;
+    background:var(--teal-deep);
+    color:var(--gold-light);
+    font-weight:800;
+    font-size:13px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:10px;
+  }
+  .step-title{
+    font-size:14px;
+    font-weight:700;
+    color:var(--teal-deep);
+    margin-bottom:4px;
+  }
+  .step-desc{
+    font-size:12px;
+    color:var(--grey-text);
+    line-height:1.5;
+  }
+
+  /* ================= FINAL CTA ================= */
+  .final-cta{
+    background:linear-gradient(165deg,var(--teal-deep) 0%,var(--teal-mid) 60%,#1B7A6E 100%);
+    padding:38px 18px 42px;
+    text-align:center;
+    color:var(--cream);
+  }
+  .final-cta h2{
+    font-size:clamp(18px,2.6vw,23px);
+    font-weight:800;
+    margin-bottom:6px;
+  }
+  .final-cta p{
+    font-size:12.5px;
+    color:#DCEFEA;
+    margin-bottom:18px;
+  }
+
+  footer{
+    text-align:center;
+    font-size:10.5px;
+    color:#9AA39E;
+    padding:16px;
+    background:var(--cream);
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="app-name">Promo<span>Adda</span></div>
+    <div class="tagline">Premium Social Media Growth — Aapki service trusted, fast aur secure hai.</div>
+
+    <a href="https://promoadda.in/install" id="downloadBtnTop" class="download-btn">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Download Now
+    </a>
+    <br>
+    <div class="counter-strip">
+      <span class="live-dot"></span>
+      <span class="counter-text">Live downloads: <span class="counter-num" id="liveCounter">12,100</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO ================= -->
+<section class="video-section wrap">
+  <div class="video-line">👇 Video Dekhein — Sab Samajh Aayega 👇</div>
+  <div class="video-frame-wrap">
+    <div class="video-frame-glow"></div>
+    <div class="video-frame" id="videoFrame">
+      <!--
+        ============================================================
+        YOUTUBE VIDEO: replace YOUTUBE_VIDEO_ID with your video ID
+        ============================================================
+      -->
+      <iframe
+        id="ytPlayer"
+        src="https://www.youtube.com/embed/aqz-KE-bpKQ?enablejsapi=1&autoplay=1&mute=1&playsinline=1&rel=0&controls=1"
+        title="How it works"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <div class="play-overlay" id="playOverlay">
+        <div class="play-circle" id="unmuteBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+          <span>Unmute</span>
+        </div>
+      </div>
+    </div>
+    <div class="float-unmute-btn" id="floatUnmuteBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+      <span>Unmute 🔊</span>
+    </div>
+  </div>
+  <div class="video-line-bottom">Sound ke liye Unmute button dabayein</div>
+</section>
+
+<!-- ================= MID-PAGE DOWNLOAD CTA ================= -->
+<section class="mid-download-section">
+  <a href="https://promoadda.in/install" id="downloadBtnMid" class="download-btn">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Download Now
+  </a>
+</section>
+
+<!-- ================= TRUST BADGES ================= -->
+<section class="badges">
+  <div class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    100% Free Install
+  </div>
+  <div class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>
+    Secure &amp; Trusted
+  </div>
+  <div class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 11-12h-7l1-8z"/></svg>
+    Fast Setup
+  </div>
+  <div class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5M14 20c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg>
+    Thousands of Users
+  </div>
+</section>
+
+<!-- ================= STEPS ================= -->
+<section class="steps-section">
+  <div class="steps-heading">Kaise Kaam Karta Hai</div>
+  <div class="steps-sub">Three simple steps to get started</div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-title">Download Karein</div>
+      <div class="step-desc">Niche diye gaye button par click karke app install karein.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-title">Account Banayein</div>
+      <div class="step-desc">App khole aur apna social media account jodain — sirf 1 minute mein.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-title">Growth Dekhein</div>
+      <div class="step-desc">Apni followers aur engagement ko badhta dekhein, roz ki update ke saath.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <h2>Ready Ho Jao Growth Ke Liye</h2>
+  <p>Download karein aur abhi se apni social media growth shuru karein.</p>
+  <a href="https://promoadda.in/install" id="downloadBtnBottom" class="download-btn">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Download Now
+  </a>
+</section>
+
+<footer>© 2026 PromoAdda. All rights reserved.</footer>
+
+<script>
+  // ---------- Live counter: slow, realistic, loops 12,100 -> 20,000 ----------
+  const counterEl = document.getElementById('liveCounter');
+  const START = 12100;
+  const CEILING = 20000;
+  let current = START;
+
+  function formatNum(n){ return n.toLocaleString('en-IN'); }
+
+  function counterTick(){
+    const step = Math.random() < 0.5 ? 1 : 2;
+    current += step;
+    if(current >= CEILING){ current = START; }
+    counterEl.textContent = formatNum(current);
+    setTimeout(counterTick, 1000 + Math.random()*1000);
+  }
+  counterEl.textContent = formatNum(current);
+  setTimeout(counterTick, 1000 + Math.random()*1000);
+
+  // ---------- Video: autoplay muted on page load, dedicated Unmute button for sound ----------
+  const ytPlayer = document.getElementById('ytPlayer');
+  const playOverlay = document.getElementById('playOverlay');
+  const unmuteBtn = document.getElementById('unmuteBtn');
+  const floatUnmuteBtn = document.getElementById('floatUnmuteBtn');
+  let soundUnlocked = false;
+
+  // Fallback: explicitly call playVideo once the YouTube iframe API is ready,
+  // in case the autoplay=1 URL param gets blocked by the browser.
+  function startMutedAutoplay(){
+    ytPlayer.contentWindow.postMessage(JSON.stringify({event:'command',func:'mute',args:[]}), '*');
+    ytPlayer.contentWindow.postMessage(JSON.stringify({event:'command',func:'playVideo',args:[]}), '*');
+  }
+  ytPlayer.addEventListener('load', function(){
+    setTimeout(startMutedAutoplay, 300);
+  });
+  // Extra safety net in case 'load' already fired before listener attached
+  setTimeout(startMutedAutoplay, 800);
+
+  function unmuteAndPlay(){
+    if(soundUnlocked) return;
+    soundUnlocked = true;
+    ytPlayer.contentWindow.postMessage(JSON.stringify({event:'command',func:'unMute',args:[]}), '*');
+    ytPlayer.contentWindow.postMessage(JSON.stringify({event:'command',func:'playVideo',args:[]}), '*');
+    playOverlay.classList.add('hidden');
+    floatUnmuteBtn.classList.add('hidden');
+  }
+  unmuteBtn.addEventListener('click', unmuteAndPlay);
+  floatUnmuteBtn.addEventListener('click', unmuteAndPlay);
+
+  // ---------- Meta Pixel: track Download button clicks ----------
+  function trackDownloadClick(){
+    if(typeof fbq === 'function'){ fbq('track', 'Lead', {content_name:'Download Button Click'}); }
+  }
+  document.getElementById('downloadBtnTop').addEventListener('click', trackDownloadClick);
+  document.getElementById('downloadBtnMid').addEventListener('click', trackDownloadClick);
+  document.getElementById('downloadBtnBottom').addEventListener('click', trackDownloadClick);
+</script>
+
+</body>
+</html>
